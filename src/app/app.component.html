@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <h1>{{ title }}!</h1>
+  <ul class="list-group">
+    <app-post *ngFor="let post of postlist; let i = index"
+              [postTitle]= "post.title"
+              [postCreatedAt]= "post.postCreatedAt"
+              [postContent]= "post.content"
+              [postLoveIts]= "post.loveIts"></app-post>
+  </ul>
+</body>
+</html>
